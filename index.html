@@ -52,16 +52,19 @@ button {
     cursor: pointer;
 }
 button:hover { background: #333; }
-#carrinho {
+
+#carrinhoIcon {
     position: fixed;
     right: 20px;
     top: 20px;
     background: #000;
     color: #fff;
-    padding: 15px;
+    padding: 12px 18px;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
+
 .chatbot {
     position: fixed;
     bottom: 20px;
@@ -96,8 +99,683 @@ button:hover { background: #333; }
     padding: 10px;
     overflow-y: auto;
 }
-</style>
 
+#pixModal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#pixBox {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    text-align: center;
+}
+.qrPix {
+    width: 220px;
+    border-radius: 10px;
+}
+
+.copy-btn {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>ChefExpress</h1>
+<p>Os melhores cursos de gastronomia por preços acessíveis!</p>
+</header>
+
+<div id="carrinhoIcon">Carrinho (0)</div>
+
+<div class="container">
+
+<h2>Todos os Cursos</h2>
+
+<div class="cursos">
+    <div class="cursos">
+        <!-- ======================= 15 CURSOS GOURMET ======================= -->
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Gourmet 1</h3>
+<p>10 receitas gourmet exclusivas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 1')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Gourmet 2</h3>
+<p>10 receitas gourmet exclusivas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 2')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Gourmet 3</h3>
+<p>10 receitas gourmet exclusivas.</p>
+<p><b>R$ 25,90</b></p>
+<button onclick="comprarCurso('Gourmet 3')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Gourmet 4</h3>
+<p>10 receitas de alta gastronomia.</p>
+<p><b>R$ 26,90</b></p>
+<button onclick="comprarCurso('Gourmet 4')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Gourmet 5</h3>
+<p>10 receitas gourmet nível profissional.</p>
+<p><b>R$ 27,90</b></p>
+<button onclick="comprarCurso('Gourmet 5')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Gourmet 6</h3>
+<p>10 receitas selecionadas com chefs.</p>
+<p><b>R$ 27,90</b></p>
+<button onclick="comprarCurso('Gourmet 6')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Gourmet 7</h3>
+<p>10 receitas elaboradas e detalhadas.</p>
+<p><b>R$ 28,90</b></p>
+<button onclick="comprarCurso('Gourmet 7')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Gourmet 8</h3>
+<p>10 receitas gourmets avançadas.</p>
+<p><b>R$ 29,90</b></p>
+<button onclick="comprarCurso('Gourmet 8')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Gourmet 9</h3>
+<p>10 receitas requintadas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 9')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Gourmet 10</h3>
+<p>10 receitas especiais para jantares.</p>
+<p><b>R$ 30,90</b></p>
+<button onclick="comprarCurso('Gourmet 10')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Gourmet 11</h3>
+<p>10 receitas de alta gourmetização.</p>
+<p><b>R$ 31,90</b></p>
+<button onclick="comprarCurso('Gourmet 11')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Gourmet 12</h3>
+<p>10 receitas para negócios gastronômicos.</p>
+<p><b>R$ 32,90</b></p>
+<button onclick="comprarCurso('Gourmet 12')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Gourmet 13</h3>
+<p>10 receitas gourmet modernas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 13')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Gourmet 14</h3>
+<p>10 receitas sofisticadas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 14')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Gourmet 15</h3>
+<p>10 receitas refinadas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Gourmet 15')">Comprar via Pix</button>
+</div>
+
+
+<!-- ======================= 15 CURSOS VEGANOS ======================= -->
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 1</h3>
+<p>10 receitas totalmente veganas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 1')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 2</h3>
+<p>10 receitas naturais e saborosas.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Vegano 2')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Vegano 3</h3>
+<p>10 receitas fáceis e nutritivas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 3')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 4</h3>
+<p>10 receitas 100% naturais.</p>
+<p><b>R$ 25,90</b></p>
+<button onclick="comprarCurso('Vegano 4')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Vegano 5</h3>
+<p>10 receitas variadas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 5')">Comprar via Pix</button>
+</div>
+<!-- ======================= CONTINUAÇÃO CURSOS VEGANOS ======================= -->
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Vegano 6</h3>
+<p>10 receitas veganas práticas.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Vegano 6')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 7</h3>
+<p>Receitas totalmente naturais.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 7')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Vegano 8</h3>
+<p>10 receitas sem ingredientes de origem animal.</p>
+<p><b>R$ 26,90</b></p>
+<button onclick="comprarCurso('Vegano 8')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Vegano 9</h3>
+<p>Receitas simples e nutritivas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 9')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 10</h3>
+<p>10 receitas para iniciantes.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Vegano 10')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Vegano 11</h3>
+<p>Receitas para emagrecimento vegano.</p>
+<p><b>R$ 25,90</b></p>
+<button onclick="comprarCurso('Vegano 11')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Vegano 12</h3>
+<p>10 receitas econômicas e veganas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 12')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Vegano 13</h3>
+<p>Receitas avançadas veganas.</p>
+<p><b>R$ 27,90</b></p>
+<button onclick="comprarCurso('Vegano 13')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Vegano 14</h3>
+<p>10 receitas veganas deliciosas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Vegano 14')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Vegano 15</h3>
+<p>Receitas naturais e caseiras veganas.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Vegano 15')">Comprar via Pix</button>
+</div
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Caseiro 1</h3>
+<p>10 receitas caseiras tradicionais.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 1')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Caseiro 2</h3>
+<p>Receitas simples para o dia a dia.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 2')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Caseiro 3</h3>
+<p>10 receitas de almoço caseiro.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Caseiro 3')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Caseiro 4</h3>
+<p>Receitas econômicas caseiras.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 4')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Caseiro 5</h3>
+<p>10 receitas fáceis caseiras.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 5')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Caseiro 6</h3>
+<p>10 receitas para vender.</p>
+<p><b>R$ 26,90</b></p>
+<button onclick="comprarCurso('Caseiro 6')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Caseiro 7</h3>
+<p>10 receitas rápidas caseiras.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 7')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Caseiro 8</h3>
+<p>10 receitas caseiras especiais.</p>
+<p><b>R$ 27,90</b></p>
+<button onclick="comprarCurso('Caseiro 8')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" alt="">
+<h3>Caseiro 9</h3>
+<p>10 receitas para famílias grandes.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 9')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Caseiro 10</h3>
+<p>10 receitas tradicionais brasileiras.</p>
+<p><b>R$ 24,90</b></p>
+<button onclick="comprarCurso('Caseiro 10')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759" alt="">
+<h3>Caseiro 11</h3>
+<p>10 receitas de jantares simples.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 11')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
+<h3>Caseiro 12</h3>
+<p>Receitas caseiras econômicas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 12')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1514516430031-43a67c5d1a65" alt="">
+<h3>Caseiro 13</h3>
+<p>10 receitas simples e baratas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 13')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="">
+<h3>Caseiro 14</h3>
+<p>10 receitas caseiras para iniciantes.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 14')">Comprar via Pix</button>
+</div>
+
+<div class="curso">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="">
+<h3>Caseiro 15</h3>
+<p>Receitas caseiras deliciosas.</p>
+<p><b>R$ 23,90</b></p>
+<button onclick="comprarCurso('Caseiro 15')">Comprar via Pix</button>
+    </div>
+  <!-- ======================= JANELA DE PAGAMENTO ======================= -->
+
+<div id="pagamentoBox" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+">
+    <div style="
+        background: #fff;
+        width: 90%;
+        max-width: 360px;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+    ">
+        <h2 id="tituloCurso"></h2>
+        <p>Para adquirir este curso, faça o pagamento via Pix abaixo:</p>
+
+        <div style="
+            background:#f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            word-break: break-all;
+        ">
+            <b>Chave Pix:</b><br>
+            <span id="chavePix">pietroluccarufino7@gmail.com</span>
+        </div>
+
+        <button onclick="copiarChavePix()" style="
+            background:#000;
+            color:#fff;
+            padding:10px;
+            border:none;
+            width:100%;
+            border-radius:8px;
+            margin-bottom:10px;
+            cursor:pointer;
+        ">Copiar Chave Pix</button>
+
+        <button onclick="fecharPagamento()" style="
+            background:#777;
+            color:#fff;
+            padding:10px;
+            border:none;
+            width:100%;
+            border-radius:8px;
+            cursor:pointer;
+        ">Fechar</button>
+    </div>
+</div>
+
+<script>
+function comprarCurso(nomeCurso) {
+    document.getElementById("pagamentoBox").style.display = "flex";
+    document.getElementById("tituloCurso").innerText = "Curso selecionado: " + nomeCurso;
+}
+
+function fecharPagamento() {
+    document.getElementById("pagamentoBox").style.display = "none";
+}
+
+function copiarChavePix() {
+    let chave = document.getElementById("chavePix").innerText;
+    navigator.clipboard.writeText(chave);
+    alert("Chave Pix copiada!");
+}
+</script>  
+        <!-- ======================= BOTÃO DO SUPORTE ======================= -->
+<div id="btnSuporte"
+     style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #000;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+     "
+     onclick="abrirChat()">
+    Suporte
+</div>
+
+
+<div id="chatSuporte"
+     style="
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        height: 380px;
+        background: #fff;
+        border: 2px solid #000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+     ">
+
+    <div style="
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+    ">
+        Suporte ChefExpress
+    </div>
+
+    <div id="mensagensSuporte"
+         style="
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+         ">
+        <div style="margin-bottom: 10px;">
+            <b>Atendente Virtual:</b><br>
+            Olá! Como posso ajudar você hoje?
+        </div>
+    </div>
+
+    <div style="padding: 10px; border-top: 1px solid #ccc;">
+        <input id="inputMsg"
+               type="text"
+               placeholder="Digite sua mensagem..."
+               style="
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 6px;
+                    border: 1px solid #aaa;
+                "
+               onkeydown="if(event.key === 'Enter'){ enviarMensagem(); }">
+    </div>
+</div>
+
+
+<script>
+
+function abrirChat() {
+    document.getElementById("chatSuporte").style.display = "flex";
+}
+
+function enviarMensagem() {
+    let campo = document.getElementById("inputMsg");
+    let texto = campo.value.trim();
+    if (texto === "") return;
+
+    // Exibir mensagem do usuário
+    adicionarMsg("Você", texto);
+
+    // Limpar campo
+    campo.value = "";
+
+    // Resposta automática
+    setTimeout(() => responder(texto.toLowerCase()), 600);
+}
+
+function adicionarMsg(usuario, texto) {
+    let box = document.getElementById("mensagensSuporte");
+    box.innerHTML += `
+        <div style="margin-bottom: 10px;">
+            <b>${usuario}:</b><br> ${texto}
+        </div>
+    `;
+    box.scrollTop = box.scrollHeight;
+}
+
+function responder(msg) {
+    let resposta = "Desculpe, não entendi. Pode tentar novamente?";
+
+    if (msg.includes("curso")) resposta = "Temos 45 cursos disponíveis! Basta rolar a página para ver todos.";
+    if (msg.includes("pagar") || msg.includes("pix")) resposta = "O pagamento é feito via Pix usando a chave: pietroluccarufino7@gmail.com.";
+    if (msg.includes("receber") || msg.includes("acesso")) resposta = "Após o pagamento, você receberá o curso automaticamente na página e poderá baixar os vídeos.";
+    if (msg.includes("chefexpress")) resposta = "A ChefExpress é sua plataforma de cursos de gastronomia!";
+    if (msg.includes("whatsapp")) resposta = "Nosso WhatsApp de suporte é: 11 98908-9430.";
+    if (msg.includes("ajuda")) resposta = "Claro! Me diga qual é sua dúvida.";
+
+    adicionarMsg("Atendente Virtual", resposta);
+}
+
+</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>ChefExpress - Cursos de Gastronomia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #333;
+}
+header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+}
+h1 { margin: 0; }
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.curso {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #ddd;
+    text-align: center;
+}
+
+.curso img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+button {
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover { background: #333; }
+
+#carrinho {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
 </head>
 <body>
 
@@ -109,29 +787,154 @@ button:hover { background: #333; }
 <div id="carrinho">Carrinho (0)</div>
 
 <div class="container">
-
 <h2>Cursos Disponíveis</h2>
 
-<div class="cursos">
-<!-- ===================================================== -->
-<!-- ====================== 45 CURSOS ===================== -->
-<!-- ===================================================== -->
+<div class="cursos" id="listaCursos"></div>
 
-<!-- 15 Cursos Gourmet -->
-<script>
-const cursos = [];
-</script>
+</div>
 
-<!-- GOURMET -->
 <script>
-const imagensGourmet = [
+let cursos = [];
+let imagens = [
  "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
  "https://images.unsplash.com/photo-1525755662778-989d0524087e",
- "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
- "https://images.unsplash.com/photo-1525755662778-989d0524087e",
- "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
- "https://images.unsplash.com/photo-1514516430031-43a67c5d1a65",
  "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
  "https://images.unsplash.com/photo-1473093295043-cdd812d0e601",
- "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
- "https://images.unsplash.com/photo-1525755662778
+ "https://images.unsplash.com/photo-1482049016688-2d3e1b311543",
+ "https://images.unsplash.com/photo-1514516430031-43a67c5d1a65",
+ "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+];
+
+function gerarCursos() {
+    const categorias = ["Gourmet", "Vegano", "Caseiro"];
+
+    categorias.forEach(cat => {
+        for (let i = 1; i <= 15; i++) {
+            cursos.push({
+                nome: `${cat} ${i}`,
+                preco: "23,90",
+                imagem: imagens[i % imagens.length]
+            });
+        }
+    });
+}
+
+function montarCursos() {
+    let html = "";
+    cursos.forEach(curso => {
+        html += `
+            <div class="curso">
+                <img src="${curso.imagem}">
+                <h3>${curso.nome}</h3>
+                <p>R$ ${curso.preco}</p>
+                <button onclick="comprarCurso('${curso.nome}')">Comprar via Pix</button>
+            </div>
+        `;
+    });
+    document.getElementById("listaCursos").innerHTML = html;
+}
+
+gerarCursos();
+montarCursos();
+</script>
+
+
+<div id="pagamentoBox" style="
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.75); display:none; justify-content:center; align-items:center;
+">
+    <div style="background:#fff; width:90%; max-width:360px; padding:20px; border-radius:15px; text-align:center;">
+        <h2 id="tituloCurso"></h2>
+        <p>Para adquirir este curso, faça o pagamento via Pix:</p>
+
+        <div style="background:#eee; padding:15px; border-radius:10px; margin-bottom:10px;">
+            <b>Chave Pix:</b><br>
+            <span id="chavePix">pietroluccarufino7@gmail.com</span>
+        </div>
+
+        <button onclick="copiarChavePix()">Copiar Chave Pix</button><br><br>
+        <button onclick="fecharPagamento()" style="background:#777;">Fechar</button>
+    </div>
+</div>
+
+<script>
+function comprarCurso(nome) {
+    document.getElementById("pagamentoBox").style.display = "flex";
+    document.getElementById("tituloCurso").innerText = "Curso selecionado: " + nome;
+}
+
+function fecharPagamento() {
+    document.getElementById("pagamentoBox").style.display = "none";
+}
+
+function copiarChavePix() {
+    navigator.clipboard.writeText("pietroluccarufino7@gmail.com");
+    alert("Chave Pix copiada!");
+}
+</script
+<div id="btnSuporte"
+     style="
+        position: fixed; bottom: 20px; right: 20px;
+        background:#000; color:#fff; padding:15px 20px;
+        border-radius:40px; cursor:pointer;
+     "
+     onclick="abrirChat()">Suporte</div>
+
+<div id="chatSuporte"
+     style="
+        display:none; position:fixed; bottom:80px; right:20px;
+        width:300px; height:380px; background:#fff;
+        border:2px solid #000; border-radius:10px;
+        display:flex; flex-direction:column;
+     ">
+
+    <div style="background:#000; color:#fff; text-align:center; padding:10px;">Suporte ChefExpress</div>
+
+    <div id="mensagensSuporte" style="flex:1; padding:10px; overflow-y:auto;">
+        <div><b>Atendente Virtual:</b><br>Olá! Como posso ajudar?</div>
+    </div>
+
+    <div style="padding:10px; border-top:1px solid #ccc;">
+        <input id="inputMsg" type="text" placeholder="Digite..." 
+               style="width:100%; padding:8px; border-radius:6px; border:1px solid #aaa;"
+               onkeydown="if(event.key==='Enter'){enviarMensagem();}">
+    </div>
+</div>
+
+<script>
+function abrirChat(){
+    document.getElementById("chatSuporte").style.display = "flex";
+}
+
+function enviarMensagem() {
+    let campo = document.getElementById("inputMsg");
+    let msg = campo.value.trim();
+    if (!msg) return;
+
+    adicionarMsg("Você", msg);
+    campo.value = "";
+
+    setTimeout(()=>responder(msg.toLowerCase()), 700);
+}
+
+function adicionarMsg(user, texto) {
+    let box = document.getElementById("mensagensSuporte");
+    box.innerHTML += `<div><b>${user}:</b><br>${texto}</div><br>`;
+    box.scrollTop = box.scrollHeight;
+}
+
+function responder(msg) {
+    let resp = "Desculpe, não entendi. Pode repetir?";
+
+    if (msg.includes("curso")) resp="Temos 45 cursos disponíveis.";
+    if (msg.includes("pix") || msg.includes("pagar")) resp="O pagamento é via Pix: pietroluccarufino7@gmail.com";
+    if (msg.includes("receber")) resp="Após pagar, você recebe o curso imediatamente.";
+    if (msg.includes("whatsapp")) resp="Nosso WhatsApp é 11 98908-9430.";
+    if (msg.includes("ajuda")) resp="Claro, qual sua dúvida?";
+
+    adicionarMsg("Atendente Virtual", resp);
+}
+</script>
+
+</body>
+</html>
