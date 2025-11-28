@@ -935,6 +935,59 @@ function responder(msg) {
     adicionarMsg("Atendente Virtual", resp);
 }
 </script>
+<!-- ========================= MODAL DE PAGAMENTO PIX ========================= -->
+<div id="pixModal" style="
+    display:none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+">
+    <div style="
+        background: #fff;
+        padding: 20px;
+        width: 90%;
+        max-width: 350px;
+        border-radius: 10px;
+        text-align: center;
+    ">
+        <h2>Pagar via Pix</h2>
+        <p>Valor: R$ 23,90</p>
 
+        <h3>Sua chave Pix:</h3>
+        <p id="pixKey">pietroluccarufino7@gmail.com</p>
+
+        <button onclick="copiarPix()" style="
+            background:black;color:white;
+            padding:10px;border:none;
+            width:100%;border-radius:8px;
+            margin-bottom:10px;
+        ">Copiar chave Pix</button>
+
+        <button onclick="fecharPix()" style="
+            background:#777;color:white;
+            padding:10px;border:none;
+            width:100%;border-radius:8px;
+        ">Fechar</button>
+    </div>
+</div>
+
+<script>
+function pagarPix(curso) {
+    document.getElementById("pixModal").style.display = "flex";
+}
+
+function fecharPix() {
+    document.getElementById("pixModal").style.display = "none";
+}
+
+function copiarPix() {
+    const chave = document.getElementById("pixKey").innerText;
+    navigator.clipboard.writeText(chave);
+    alert("Chave Pix copiada!");
+}
+</script>
 </body>
 </html>
