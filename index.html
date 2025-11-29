@@ -992,6 +992,49 @@ function copiarPix() {
 <!-- ==========================
 PÁGINA DE PAGAMENTO PIX (TELA CHEIA)
 ========================== -->
+/* Diminuir largura geral da página */
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Diminuir tamanho dos cards */
+.course-card {
+    max-width: 260px;
+    padding: 12px;
+    margin: 10px;
+}
+
+/* Diminuir imagens */
+.course-card img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Diminuir textos */
+.course-card h3 {
+    font-size: 16px;
+}
+
+.course-card p {
+    font-size: 14px;
+}
+
+/* Botão menor */
+.course-card button {
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+/* Grid mais organizado */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 <style>
 #pagamentoPage {
     position: fixed;
