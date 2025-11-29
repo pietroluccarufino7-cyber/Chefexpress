@@ -4,7 +4,49 @@
 <meta charset="UTF-8">
 <title>ChefExpress - Cursos de Gastronomia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+/* Corrigir layout desalinhado e espaço gigante */
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
 
+/* CENTRALIZA todo o conteúdo que está esmagado na esquerda */
+* {
+    box-sizing: border-box !important;
+}
+
+.container, 
+#app,
+main,
+section,
+.cursos-lista,
+.lista-cursos,
+.grid {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+/* Corrige cards esticados */
+.curso-card,
+.card {
+    width: 92% !important;
+    margin: 10px auto !important;
+}
+
+/* Remove qualquer largura gigante que esteja quebrando o layout */
+div, section {
+    max-width: 100% !important;
+}
+
+/* Garante que IMAGENS não quebrem o layout */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
 <style>
 body {
     font-family: Arial, sans-serif;
