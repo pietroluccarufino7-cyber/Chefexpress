@@ -1035,7 +1035,33 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-<style>
+/* FORÇA o site a ficar do tamanho certo no celular */
+body {
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+/* Centraliza tudo */
+#app, .container, main {
+    max-width: 420px !important;
+    margin: 0 auto !important;
+}
+
+/* Deixa a lista dos cursos encaixar no centro */
+.cursos-lista, .lista-cursos, .grid {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+}
+
+/* Ajusta os cards */
+.curso-card, .card {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 10px auto !important;
+}<style> 
 #pagamentoPage {
     position: fixed;
     top: 0;
